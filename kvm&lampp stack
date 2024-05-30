@@ -1,0 +1,49 @@
+sudo apt get-update
+kvm-ok
+sudo apt install cpu-checker
+sudo apt install -y qemu-kvm libvirt-daemon-system virt-manager
+sudo systemctl enable --now libvirt
+sudo systemctl start  libvirt
+sudo systemctl status libvirt
+
+
+
+
+
+
+
+//LAMP STACK INSTAllation
+
+
+
+sudo apt-get update
+sudo apt install apache2 -y
+
+
+
+
+sudo apt install mysql-server -y
+
+
+
+sudo apt install php libapache2-mod-php php-mysql-y
+sudo nano /etc/apache2/mods-enabled/dir.conf
+sudo sysstemctl restsrt apache2
+sudo nano /var/www/html/info.php
+
+<?php
+phpinfo();
+?>
+
+
+
+sudo apt install phpmyadmin -y
+
+
+sudo mysql
+
+create user 'alen'@'localhost' identified by '3801';
+grant all privileges on *.* to 'alen'@'localhost';
+flush privileges;
+exit;
+
